@@ -1,1 +1,150 @@
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #fdf0e7, #f8dfd9, #f5e8d8);
+}
+
+/* Calculator body */
+.calculator {
+    width: 350px;
+    max-width: 100%;
+    padding: 24px;
+    border-radius: 35px;
+    background: linear-gradient(145deg, #fff5ef, #f5dcd5);
+    border: 2px solid #f1c9bd;
+    box-shadow:
+        10px 12px 25px rgba(156, 103, 91, 0.18),
+        inset 3px 3px 8px rgba(255, 255, 255, 0.9),
+        inset -3px -3px 8px rgba(225, 173, 162, 0.3);
+}
+
+/* Calculator header */
+.calculator-top {
+    margin-bottom: 22px;
+}
+
+.brand {
+    text-align: center;
+    color: #9b5e68;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+/* Retro display */
+.display-container {
+    padding: 12px;
+    border-radius: 20px;
+    background: #e9d6ce;
+    box-shadow:
+        inset 4px 4px 8px rgba(139, 94, 85, 0.2),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+#display {
+    width: 100%;
+    height: 65px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background: #e5e9d8;
+    color: #515746;
+    font-family: monospace;
+    font-size: 30px;
+    text-align: right;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+}
+
+/* Round pastel calculator buttons */
+.pink-button {
+    height: 65px;
+    border: 1px solid #e9c5bd;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #fbe3dc, #efc5bc);
+    color: #875760;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+        4px 5px 8px rgba(170, 107, 100, 0.2),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.8),
+        inset -2px -2px 4px rgba(213, 159, 151, 0.2);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.pink-button:hover {
+    background: linear-gradient(145deg, #ffece5, #f2d0c7);
+    transform: translateY(-2px);
+}
+
+.pink-button:active {
+    transform: scale(0.94);
+    box-shadow: inset 3px 3px 6px rgba(170, 107, 100, 0.2);
+}
+
+/* Special buttons */
+.special {
+    background: linear-gradient(145deg, #eecbd1, #dfaebc);
+    color: #855365;
+}
+
+.operator {
+    background: linear-gradient(145deg, #f5d5d0, #e9b5ad);
+    color: #985b64;
+}
+
+.equal {
+    background: linear-gradient(145deg, #d9b6c8, #c795b2);
+    color: white;
+    border-color: #d2a5bc;
+}
+
+/* Wider zero button */
+.zero {
+    grid-column: span 2;
+    border-radius: 40px;
+}
+
+/* Footer */
+.footer-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #b07a83;
+}
+
+/* Mobile responsive */
+@media (max-width: 400px) {
+    .calculator {
+        padding: 18px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .pink-button {
+        height: 58px;
+    }
+}
+
